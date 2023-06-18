@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 .home-screen {
   height: 100vh;
@@ -15,6 +16,40 @@ header {
   padding: 25px 60px 25px 60px;
   justify-content: center;
   position: relative;
+  
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  height: fit-content;
+  width: 100%;
+  margin-top: 0px !important;
+  padding: 0px 18px !important;
+}
+
+.shadow{
+  position: fixed !important;
+  top: 0 !important;
+  /* height: fit-content; */
+  /* height: 80px; */
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.082);
+  animation: mobileMeu 0.6s ease-in-out;
+}
+
+@keyframes mobileMeu {
+  0% {
+    /* transform: translateY(-100%); */
+    opacity: 0%;
+  }
+  100% {
+    /* transform: translateY(0%); */
+    opacity: 100%;
+  }
 }
 
 .header{
@@ -22,13 +57,17 @@ header {
   flex-direction: row;
   justify-content: space-between;
   /* background-color: yellow; */
-  width: 92%;
-  margin: 5px calc(100vw - 90% - 60px);
+  align-items: center;
+  width: 1200px;
+  /* background-color: red; */
+  margin: 3px calc(100vw - 90% - 60px);
 }
+
 
 header img {
   width: 134px;
-  margin: 0 1rem;
+  padding-bottom: 0px;
+  /* margin: 0 1rem; */
   /* background-color: blue; */
 }
 
@@ -52,7 +91,7 @@ header a {
   font-size: 20px;
   font-weight: 500;
   text-transform: capitalize;
-  line-height: 30px;
+  /* line-height: 30px; */
 }
 
 nav {
@@ -63,6 +102,15 @@ nav {
   text-align: center;
 }
 
+.book-btn{
+  margin-right: 15px;
+}
+
+.desktop-nav ul{
+  /* background-color: blue; */
+  margin-bottom: 0px;
+}
+
 nav button{
   padding: 13px 29px;
   height: fit-content;
@@ -70,7 +118,7 @@ nav button{
   color: black;
   font-size: 20px;
   transition: color 0.3s ease;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 nav button:hover{
@@ -82,10 +130,11 @@ nav button:hover{
 .menu-btn, .menu-btn:hover{
   background: url('https://siamcomputing.com/wp-content/uploads/2021/09/Siam_hamburger.png');
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
+  /* width: 30px !important;
+  height: 30px !important; */
+  height: auto;
   width: 30px;
-  height: 30px;
   border: none;
 }
 
@@ -96,7 +145,7 @@ nav button:hover{
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  row-gap: 24px;
+  row-gap: 30px;
   margin-top: 40px;
   padding-left: 1rem;
 }
@@ -108,9 +157,10 @@ nav button:hover{
 .mobile-nav a{
   
   font-weight: 100;
-  font-family: 'prompt', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
+  color: #16163f;
 }
 
 .mobile-nav a:hover{
@@ -205,6 +255,88 @@ footer{
   padding: 40px 0;
 }
 
+i{
+  cursor: pointer;
+}
+
+/* Why us */
+
+.why-us{
+  padding-top: 80px;
+  display: grid;
+  place-items: center;
+}
+
+.whyus-heading{
+  color: #333333;
+    font-family: url('https://fonts.googleapis.com/css2?family=Prompt');
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 52px;
+    background: url(https://siamcomputing.com/wp-content/uploads/2021/09/Group-62-1-1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 94%;
+    padding: 0px 9px 25px 9px
+}
+
+.whyus-contents{
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  width: 1200px;
+  padding: 80px 0px 30px 0px;
+  /* flex-wrap: wrap; */
+}
+
+.whyus-main-content{
+  padding: 50px 0px 50px 0px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  transition: background-color 0.8s ease;
+  /* width: 100%; */
+}
+
+.whyus-main-content:hover{
+  background-color: #FFF5F5;
+}
+
+.whyus-main-content img{
+  width: 23%;
+}
+.whyus-main-content h3{
+  padding: 20px 0px 10px 0px;
+  font-family: "Prompt";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.whyus-main-content p {
+  padding: 0px 40px 0px 40px;
+  text-align: center;
+  color: #444444;
+  font-family: 'prompt';
+  font-weight: 400;
+  font-size: 18px;
+  overflow-wrap: break-word;
+}
+
+.float{
+	position:fixed;
+	/* width:60px; */
+  font-size: 15px;
+	height:38px;
+	bottom:20px;
+	right:20px;
+	background-color: rgb(224, 50, 56);
+	color:#FFF;
+	border-radius:20px;
+  padding: 0px 14px 0px 14px;
+	/* text-align:center; */
+}
+
+
 
 
 /* Media Query for Mobile Devices */
@@ -215,10 +347,10 @@ footer{
 
   .header{
     width: 100%;
-    margin: 5px 5px
+    margin: 6px 6px
   }
   .header img{
-    width: calc(15vw);
+    width: calc(16vw + 10px);
   }
 
   .header button {
@@ -262,16 +394,48 @@ footer{
     align-items: center;
     flex-wrap: wrap;
   }
+  .whyus-contents{
+    padding: 30px 0px 30px 0px;
+  }
+  .whyus-main-content{
+    width: 100% !important;
+    padding: 30px;
+  }
+  .whyus-heading{
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .whyus-main-content h3{
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 18px;
+  }
+
+  .whyus-main-content p {
+    font-size: 14px;
+    line-height: 26px;
+    padding: 0px;
+  }
+  .float{
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+  }
+
+  .home-screen .shadow{
+    height: 50px;
+  }
   
 }
 
 /* Media Query for tablet Devices */
 @media (min-width: 481px) and (max-width: 1500px) {
   header{
-    padding: 25px 60px 25px 60px;
+    padding: 25px 30px 25px 30px;
   }
   .header{
-    width: 100%;
+    /* width: 100%; */
     margin: 5px 0;
     /* background-color: red; */
   }
@@ -281,6 +445,10 @@ footer{
 }
 
 @media (max-width: 1200px){
+
+  .header{
+    width: 100%;
+  }
   nav{
     align-items: center;
   }
@@ -322,8 +490,15 @@ footer{
       width: 80vw;
     }
   }
-  .footer-links, .social-media, .copy-right{
+  .footer-links, .social-media, .copy-right, .whyus-contents{
     width: 100%;
+  }
+  .whyus-contents{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .whyus-main-content{
+    width: 50%
   }
 }
 

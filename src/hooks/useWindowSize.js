@@ -6,6 +6,7 @@ function useWindowSize() {
         dynamicWidth: window.innerWidth,
         dynamicHeight: window.innerHeight
       });
+      const [Y, getY] = useState(window.scrollY);
       
       const setDimension = () => {
         getDimension({
@@ -16,13 +17,15 @@ function useWindowSize() {
       
       useEffect(() => {
         window.addEventListener('resize', setDimension);
+        window.addEventListener('scroll', () =>  getY(window.scrollY));
         
         return(() => {
-            window.removeEventListener('resize', setDimension);
+          window.removeEventListener('resize', setDimension);
+          window.removeEventListener('scroll', () => getY(window.scrollY));
         })
-      }, [screenSize])
+      }, [screenSize, Y])
   
-      return screenSize
+      return { ...screenSize, Y}
 }
 
 export default useWindowSize

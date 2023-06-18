@@ -3,20 +3,21 @@ import React from 'react'
 import useWindowSize from '../hooks/useWindowSize'
 
 function Header() {
-  const {dynamicWidth} = useWindowSize()
+  const {dynamicWidth, Y} = useWindowSize()
   const [showMenu, setShowMenu] = React.useState(false)
+  const [navLinks] = React.useState(['Service', 'Skills', 'About', 'Resource'])
+
+
 
   return (
-    <section className='home-screen'>
-      <header>
-      <div className='header'>
+    <section className={`home-screen`}>
+      <header className={`${Y >100 ? 'shadow' : ''}`}>
+      <div className={`header ${Y >= 100 ? 'sticky' : ''}`}>
         <img src='https://siamcomputing.com/wp-content/uploads/2021/09/siam-computing-trans.png' alt='logo'/>
-        <nav>
+        
+        <nav className='desktop-nav'>
           {dynamicWidth > 1200 && <ul>
-            <li><a href='#'>Service <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>
-            <li><a href='#'>Skills <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>
-            <li><a href='#'>About <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>
-            <li><a href='#'>Resource <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>
+            {navLinks.map((link, i) => <li key={i}><a href='#'>{link} <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>)}            
           </ul>}
           
           <button className='book-btn'>Book a free call</button>
@@ -27,10 +28,7 @@ function Header() {
               <nav className='mobile-nav'>
                 <ul>
                   <li onClick={() => setShowMenu(false)}><a><CloseOutlined  style={{paddingRight: 10, color: '#cf2e2e'}}/> Close </a></li>
-                  <li><a href='#'>Service <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>
-                  <li><a href='#'>Skills <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>
-                  <li><a href='#'>About <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>
-                  <li><a href='#'>Resource <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>
+                  {navLinks.map((link, i) => <li key={i}><a href='#'>{link} <CaretDownOutlined  style={{paddingLeft: 10}}/></a></li>)}
                 </ul>
               </nav>
             </div>
