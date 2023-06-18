@@ -118,7 +118,7 @@ nav button{
   color: black;
   font-size: 20px;
   transition: color 0.3s ease;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 nav button:hover{
@@ -336,6 +336,48 @@ i{
 	/* text-align:center; */
 }
 
+/* design seaction */
+
+.home-design-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.design-section{
+  /* background-color: red; */
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.design-section-1{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 80px 0px 80px 0px;
+}
+
+.design-section-1 h3{
+  font-family: "Prompt" sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  /* line-height: 52px; */
+  color: #333333;
+  padding-bottom: 20px;
+}
+
+.design-section-3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.design-section-3 img{
+  width: 19%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
 
 
 
@@ -490,7 +532,7 @@ i{
       width: 80vw;
     }
   }
-  .footer-links, .social-media, .copy-right, .whyus-contents{
+  .footer-links, .social-media, .copy-right, .whyus-contents, .design-section{
     width: 100%;
   }
   .whyus-contents{

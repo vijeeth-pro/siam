@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer>
+    <footer >
             <div className="footer-links">
                 <div className="footer-address">
                     <img src='https://siamcomputing.com/wp-content/uploads/2021/09/footer-logo-siam.webp'/>

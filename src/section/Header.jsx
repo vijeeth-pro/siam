@@ -6,6 +6,15 @@ function Header() {
   const {dynamicWidth, Y} = useWindowSize()
   const [showMenu, setShowMenu] = React.useState(false)
   const [navLinks] = React.useState(['Service', 'Skills', 'About', 'Resource'])
+  const [sponsorLinks] = React.useState([
+    'https://siamcomputing.com/wp-content/uploads/2022/05/NWS-logo-removebg-preview.png',
+    'https://siamcomputing.com/wp-content/uploads/2022/05/Navya-logo-removebg-preview.png',
+    'https://siamcomputing.com/wp-content/uploads/2022/05/Detect-logo-removebg-preview.png',
+    'https://siamcomputing.com/wp-content/uploads/2022/07/Xcode-logo.png',
+    'https://siamcomputing.com/wp-content/uploads/elementor/thumbs/SPI-Cinemas-Logo-removebg-preview-pr2ecblb60iwjppbtttj7lrevoww6dctordc2uljgs.png',
+    'https://siamcomputing.com/wp-content/uploads/2022/05/I-wanna-learn-logo.png',
+
+  ])
 
 
 
@@ -36,6 +45,22 @@ function Header() {
         </nav>
       </div>
       </header>
+      {/* <div className='home-design-section'>
+
+        <div className='design-section'>
+          <div className='design-section-1'>
+            <h1>Startups need to scale fast. We get it. </h1>
+            <p>
+            Our skin in the game philosophy enables multiple iterations, lower cash burn and a faster road to product-market fitment.	
+            </p>
+            <button>Get in touch with an expert</button>
+          </div>
+          <img className='design-section-2' src='https://siamcomputing.com/wp-content/uploads/elementor/thumbs/slazzer-edit-image-2-pr2h3azl01wsmnnzuf26gsmaedcx6w8oys4nblgmc4.png'></img>
+        </div>
+        <div className='design-section-3'>
+          {sponsorLinks.map((link,i) => <img key={i} src={link} alt='sponsor' />)}
+        </div>
+      </div> */}
     </section>
   )
 }

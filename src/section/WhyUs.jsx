@@ -21,14 +21,14 @@ function WhyUs() {
 
 
   return (
-    <section className='why-us'>
+    <section className='why-us' data-aos="fade-up">
         <header className='whyus-heading'>
             Why Us.
         </header>
         <div className='whyus-contents'>
             {content.map((item, index) => {
                 return (
-                    <div className='whyus-main-content' key={index}>
+                    <div className='whyus-main-content' key={index} data-aos="fade-up">
                         <img src={item.img} alt={item.title} />
                         <h3>{item.title}</h3>
                         <p>{item.desc}</p>
